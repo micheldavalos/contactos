@@ -1,20 +1,20 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Contactos
+    <ion-title style="background-color: #582841 ">
+      <h2 style="background-color: #582841; color: #F36F38; ">Contactos</h2>
     </ion-title>
     <ion-buttons end>
-      <button ion-button icon-only color="royal" (click)="clickAdd()">
-        <ion-icon name="add"></ion-icon>
+      <button ion-button icon-only color="danger" (click)="clickAdd()">
+        <ion-icon name="add" color="danger"></ion-icon>
       </button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-list *ngFor="let c of contactos">
-    <ion-item-sliding (click)="clickContacto(c)">
-      <ion-item>
+<ion-content padding style="background-color: #582841 ">
+  <ion-list >
+    <ion-item-sliding *ngFor="let c of contactos" (click)="clickContacto(c)">
+      <ion-item style="background-color: #CC2A49">
         <ion-avatar item-start>
           <img [src]=c.avatar>
         </ion-avatar>

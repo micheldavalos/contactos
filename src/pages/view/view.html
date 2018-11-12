@@ -7,33 +7,35 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{contacto.nombre}}</ion-title>
+    <ion-title style="background-color: #582841">
+      <h2 style="background-color: #582841; color: white">{{contacto.nombre}}</h2>
+    </ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-  <ion-card>
-    <img [src]=contacto.avatar>
-    <ion-item>
-      <ion-icon name="mail" item-start></ion-icon>
+<ion-content padding style="background-color: #582841 ">
+  <ion-card >
+    <img [src]=contacto.avatar style="background-color: #F36F48">
+    <ion-item style="background-color: #F36F48">
+      <ion-icon name="mail" color="primaryB" item-start></ion-icon>
       {{contacto.correo}}
     </ion-item>
-    <ion-item>
-      <ion-icon name="logo-whatsapp" item-start></ion-icon>
+    <ion-item style="background-color: #F36F48">
+      <ion-icon name="logo-whatsapp" color="primaryB" item-start></ion-icon>
       {{contacto.telefono}}
     </ion-item>
-    <ion-item>
-      <ion-icon name="logo-facebook" item-start></ion-icon>
+    <ion-item style="background-color: #F36F48">
+      <ion-icon name="logo-facebook" color="primaryB" item-start></ion-icon>
       {{contacto.facebook}}
     </ion-item>
-    <ion-item>
-      <ion-icon name="logo-twitter" item-start></ion-icon>
+    <ion-item style="background-color: #F36F48">
+      <ion-icon name="logo-twitter" color="primaryB" item-start></ion-icon>
       {{contacto.twitter}}
     </ion-item>
-    <ion-item>
-      <ion-icon name="logo-instagram" item-start></ion-icon>
+    <ion-item style="background-color: #F36F48">
+      <ion-icon name="logo-instagram" color="primaryB" item-start></ion-icon>
       {{contacto.instagram}}
     </ion-item>
   </ion-card>

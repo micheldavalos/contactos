@@ -10,15 +10,44 @@ import {ViewPage} from "../view/view";
 export class HomePage {
   contactoPage = ContactoPage;
   viewPage = ViewPage;
-  avatar = 1;
-  contactos = [];
+  avatar = 4;
+  contactos = [
+    {
+      'avatar': '../assets/imgs/3.jpg',
+      'nombre': 'Michel Dávalos',
+      'correo': 'mdavalos@cedi.edu.mx',
+      'telefono': '(33) 11 22 33 44',
+      'facebook': 'michel.prueba',
+      'twitter': '@michel.prueba',
+      'instagram': 'michel.insta'
+    },
+    {
+      'avatar': '../assets/imgs/12.jpg',
+      'nombre': 'Casandra Hernández',
+      'correo': 'chernadez@cedi.edu.mx',
+      'telefono': '(33) 55 66 77 88',
+      'facebook': 'casandra.prueba',
+      'twitter': '@cass.prueba',
+      'instagram': 'cass.hern'
+    },
+    {
+      'avatar': '../assets/imgs/1.jpg',
+      'nombre': 'Rafael Guerrero',
+      'correo': 'rguerrero@cedi.edu.mx',
+      'telefono': '(33) 12 34 56 78',
+      'facebook': 'rafa.warrior',
+      'twitter': '@rafael.warrior',
+      'instagram': 'rafa.warrior'
+    }
+  ];
 
   constructor(public navCtrl: NavController) {
 
   }
 
   clickAdd() {
-    this.avatar += this.avatar % 21;
+    this.avatar += 1;
+    this.avatar = this.avatar % 21;
 
     this.navCtrl.push(this.contactoPage,
       {
