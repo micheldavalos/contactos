@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {ContactoPage} from "../contacto/contacto";
+import {ViewPage} from "../view/view";
 
 @Component({
   selector: 'page-home',
@@ -8,6 +9,7 @@ import {ContactoPage} from "../contacto/contacto";
 })
 export class HomePage {
   contactoPage = ContactoPage;
+  viewPage = ViewPage;
   avatar = 1;
   contactos = [];
 
@@ -23,5 +25,9 @@ export class HomePage {
         contactos: this.contactos,
         avatar: '../assets/imgs/' + this.avatar.toString() + '.jpg'
       });
+  }
+
+  clickContacto(contacto: any) {
+    this.navCtrl.push(this.viewPage, {'contacto': contacto})
   }
 }

@@ -59,11 +59,8 @@ export class ContactoPage {
           'instagram': this.instagram
         }
       );
-
       this.navCtrl.pop();
     }
-
-
   }
 
 }

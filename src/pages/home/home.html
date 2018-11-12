@@ -13,7 +13,7 @@
 
 <ion-content padding>
   <ion-list *ngFor="let c of contactos">
-    <ion-item-sliding>
+    <ion-item-sliding (click)="clickContacto(c)">
       <ion-item>
         <ion-avatar item-start>
           <img [src]=c.avatar>
@@ -23,7 +23,7 @@
       </ion-item>
       <ion-item-options side="right">
         <button ion-button color="danger">
-          <ion-icon name="cross"></ion-icon>
+          <ion-icon name="close"></ion-icon>
           Eliminar
         </button>
       </ion-item-options>
