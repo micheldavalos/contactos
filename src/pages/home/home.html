@@ -4,8 +4,8 @@
       Contactos
     </ion-title>
     <ion-buttons end>
-      <button ion-button icon-only color="royal">
-        <ion-icon name="person-add"></ion-icon>
+      <button ion-button icon-only color="royal" (click)="clickAdd()">
+        <ion-icon name="add"></ion-icon>
       </button>
     </ion-buttons>
   </ion-toolbar>
@@ -19,10 +19,11 @@
           <img [src]=c.avatar>
         </ion-avatar>
         <h2>{{c.nombre}}</h2>
+        <p>{{c.telefono}}</p>
       </ion-item>
-      <ion-item-options side="left">
+      <ion-item-options side="right">
         <button ion-button color="danger">
-          <ion-icon name="text"></ion-icon>
+          <ion-icon name="cross"></ion-icon>
           Eliminar
         </button>
       </ion-item-options>
