@@ -1,34 +1,29 @@
 <ion-header>
-  <ion-navbar>
+  <ion-toolbar>
     <ion-title>
       Contactos
     </ion-title>
-  </ion-navbar>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal">
+        <ion-icon name="person-add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
+  <ion-list *ngFor="let c of contactos">
     <ion-item-sliding>
       <ion-item>
         <ion-avatar item-start>
-          <img src="img/slimer.png">
+          <img [src]=c.avatar>
         </ion-avatar>
-        <h2>Slimer</h2>
+        <h2>{{c.nombre}}</h2>
       </ion-item>
       <ion-item-options side="left">
-        <button ion-button color="primary">
+        <button ion-button color="danger">
           <ion-icon name="text"></ion-icon>
-          Text
-        </button>
-        <button ion-button color="secondary">
-          <ion-icon name="call"></ion-icon>
-          Call
-        </button>
-      </ion-item-options>
-      <ion-item-options side="right">
-        <button ion-button color="primary">
-          <ion-icon name="mail"></ion-icon>
-          Email
+          Eliminar
         </button>
       </ion-item-options>
     </ion-item-sliding>
