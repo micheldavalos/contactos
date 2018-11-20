@@ -55,4 +55,17 @@ export class HomePage {
   clickContacto(contacto: any) {
     this.navCtrl.push(this.viewPage, {'contacto': contacto})
   }
+
+  clickRemove(contacto: any) {
+    let index = this.contactos.findIndex(d => d.nombre == contacto.nombre);
+
+    if (index >= 0) {
+      this.contactos.splice(index, 1);
+      this.storage.set('contactos', JSON.stringify(this.contactos));
+    }
+    else {
+      console.log('no se elimino');
+    }
+
+  }
 }

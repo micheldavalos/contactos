@@ -13,8 +13,8 @@
 
 <ion-content padding style="background-color: #582841 ">
   <ion-list >
-    <ion-item-sliding *ngFor="let c of contactos" (click)="clickContacto(c)">
-      <ion-item style="background-color: #CC2A49">
+    <ion-item-sliding *ngFor="let c of contactos">
+      <ion-item (click)="clickContacto(c)" style="background-color: #CC2A49">
         <ion-avatar item-start>
           <img [src]=c.avatar>
         </ion-avatar>
@@ -22,7 +22,7 @@
         <p>{{c.telefono}}</p>
       </ion-item>
       <ion-item-options side="right">
-        <button ion-button color="danger">
+        <button ion-button color="danger" (click)="clickRemove(c)">
           <ion-icon name="close"></ion-icon>
           Eliminar
         </button>
