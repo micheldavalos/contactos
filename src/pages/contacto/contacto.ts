@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {AlertController} from "ionic-angular";
+import {Storage} from "@ionic/storage";
 
 /**
  * Generated class for the ContactoPage page.
@@ -25,7 +26,8 @@ export class ContactoPage {
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              public alertCtr: AlertController) {
+              public alertCtr: AlertController,
+              public storage: Storage) {
   }
 
   ionViewDidLoad() {
@@ -59,6 +61,7 @@ export class ContactoPage {
           'instagram': this.instagram
         }
       );
+      this.storage.set('contactos', JSON.stringify(contactos));
       this.navCtrl.pop();
     }
   }
